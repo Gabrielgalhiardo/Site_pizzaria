@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Colorado</title>
+</head>
+<body id="fundo">
+    <section id="primeiraParte">
+        <article id="inicio">
+            <h1 id="textoInicio">Bem-vindo</h1>
+            <form id="loginForm">
+                <div id="nome">
+                    <label for="inputNome">Nome:</label>
+                    <input type="text"placeholder="Digite seu nome" id="inputNome" required>
+                </div>
+                <div id="senha">
+                    <label for="inputSenha">Senha:</label>
+                    <input type="password" placeholder="Digite sua senha" id="inputSenha" required>
+                    <button onclick="mostrarSenha()" id="botaoSenha" type="button"><p id="textoBotaoSenha">👁️</p></button>
+                </div>
+            
+                <button type="submit" id="botaoEnviar">Enviar</button>
+            </form>
+            <button onclick="mudarModo()" id="botaoMudar" type="button"><p id="textoBotaoMudar">Ativar modo noturno</p></button>
+        </div>
+  
+    </section>
+
+</body>
+<script src="scripts.js"></script>
+</html>
