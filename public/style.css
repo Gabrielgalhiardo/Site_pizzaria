@@ -1,0 +1,166 @@
+body{
+    background-color: rgb(255, 102, 102);
+    transition: background-color 0.6s, color 0.4s; 
+}
+
+#inicio{
+    background-color: rgb(217, 95, 95);
+    box-shadow: 20px 10px 10px black;
+    width: 35%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 15%;
+    border-radius: 20px;
+    transition: background-color 0.6s, color 0.4s; 
+
+
+}
+
+#cadastrar{
+    background-color: rgb(217, 95, 95);
+    box-shadow: 20px 10px 10px black;
+    width: 35%;
+    height: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 15%;
+    border-radius: 20px;
+    transition: background-color 0.6s, color 0.4s; 
+}
+h1{
+    /* background-color: black; */
+    margin: 0 auto;
+    font-size: 30px;
+    padding: 15px;
+    margin-bottom: 2vh;
+}
+
+#botaoSenha{
+    background-color: transparent;
+    border: transparent;
+    width: 40px;
+    height: 40px;
+}
+
+#botaoMudar{
+    background-color: transparent;
+    border: transparent;
+    position: absolute;
+    top: 30%;
+    left: 63%;
+    width: 5em;
+    height: 5em;
+    font-weight: bold;
+}
+
+#botaoMudar:hover{
+    animation: mudarCor alternate 5s linear infinite;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+
+}
+#senhaCriada, #emailCriado{
+    border-radius: 20px;
+    margin-bottom: 10px;
+    height: 30px;
+    display: block;
+    align-items: center;
+}
+#senha, #email, #inputNome{
+    border-radius: 20px;
+    margin-bottom: 10px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#inputSenha{
+    border-radius: 20px;
+    margin-top: 20px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+#botaoEnviar{
+    background-color: rgb(177, 59, 59);
+    border: transparent;
+    width: 50%;
+    padding: 9px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    border-radius: 20px;
+}
+#botaoEnviar:hover{
+    transition: 500ms;
+    background-color: rgb(243, 32, 99);
+}
+
+#cadastrar{
+    display: none;
+}
+
+.botaologin{
+    font-size: 15px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: transparent;
+    height: 6vh;
+    width: 13vh;
+
+}
+
+.botaologin:hover{
+    transition: 500ms;
+    transform: scale(1.15);
+    color: white;
+    
+}
+
+#botaoCadastrar{
+    background-color: rgb(177, 59, 59);
+    border: transparent;
+    width: 50%;
+    padding: 9px;
+    display: block;
+    align-self: center;
+    border-radius: 20px;
+}
+
+@keyframes mudarCor{
+    0%{
+        color: white;
+    }
+    15%{
+        color: red;
+    }
+    30%{
+        color: blue;
+    }
+    45%{
+        color: purple;
+    }
+    60%{
+        color: yellow;
+    }
+    75%{
+        color: green;
+    }
+    90%{
+        color: orange;
+    }
+    100%{
+        color: pink;
+    }
+
+}
