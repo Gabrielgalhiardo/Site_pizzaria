@@ -44,7 +44,7 @@ function logarSite(){
         data.forEach(usuario => {
             if(email === usuario.email & senha === usuario.senha){
                 alert('Pagina aceitou sua solicitação!');
-                window.location.href = `paginaLogada.html`;
+                window.location.href = `public/pizzariaSite/pizzaria.html`;
                 return;
             }else if(email === usuario.email){
                 alert('Senha errada!');
@@ -56,25 +56,34 @@ function logarSite(){
 }
 
 
-
+var escuro = true;
 function mudarModo(){
     let fundo = document.body;
     let fundinho = document.getElementById(`inicio`);
     let textoBotao = document.getElementById(`textoBotaoMudar`);
-    textoBotao.inner
+    let botaoLogin = document.querySelectorAll(`.botaologin`);
+    let cadastro = document.getElementById(`cadastrar`);
 
-    if(fundo.style.backgroundColor == `black`){
-        fundo.style.backgroundColor = `rgb(255, 102, 102)`;
+    if(escuro){
         fundo.style.color = `black`;
-        fundinho.style.backgroundColor = `rgb(217, 95, 95)`;
-        fundinho.style.boxShadow = `20px 10px 10px black`;
-        textoBotao.innerText = `Ativar modo noturno`;
+        fundinho.style.backgroundColor = `rgb(165, 165, 165)`;
+        textoBotao.innerText = `Ativar modo Escuro`;
+        textoBotao.style.color = `black`;
+        botaoLogin.forEach(textoColor => {
+            textoColor.style.color = `black`;
+        });
+        cadastro.style.backgroundColor = `rgb(165, 165, 165)`;
+        escuro = false;
     }else{
-        fundo.style.backgroundColor = `black`;
         fundo.style.color = `white`;
-        fundinho.style.backgroundColor = `rgb(96, 10, 10)`;
-        fundinho.style.boxShadow = `13px 10px 10px rgb(153, 15, 15)`;
-        textoBotao.innerText = `Ativar modo claro`; 
+        fundinho.style.backgroundColor = `rgba(15, 11, 2, 0.726)`;
+        textoBotao.innerText = `Ativar modo Claro`; 
+        textoBotao.style.color = `White`;
+        botaoLogin.forEach(textoColor => {
+            textoColor.style.color = `White`;
+        });
+        cadastro.style.backgroundColor = `rgba(15, 11, 2, 0.726)`;
+        escuro = true;
     }
 }
 

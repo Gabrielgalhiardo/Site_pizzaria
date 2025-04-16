@@ -1,0 +1,292 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    /* background-color: black; */
+}
+
+header{
+    height: 100vh;
+    width: 100%;
+    background-image: url(Img/pizzaiolo.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #223076;
+    filter: brightness(0.7) contrast(2) saturate(1.3);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    /* background-color: beige; */
+}
+
+ul{
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+}
+
+li{
+    margin-right: 50px;
+    font-size: 33px;
+}
+
+a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover{
+    display: inline-block;
+    transition: 500ms;
+    transform: scale(1.05);
+    color: #c1caf9;
+}
+
+.botoesComuns{
+    background-color: rgb(215, 149, 18);
+    color: black;
+    width: 150px;
+    height: 65px;
+    font-size: 23px;
+    font-weight: bold;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-top: 30px;
+}
+
+.botoesComuns:hover{
+    transition: 500ms;
+    background-color: rgb(133, 96, 21);
+    color: white;
+    cursor: pointer;
+}
+
+#textoHeader{
+    /* background-color: wheat; */
+    font-size: 30px;
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
+
+#animacao{
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    animation: aparecerBlocosDeLado linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+#introdutorio{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    background-color: rgb(14, 6, 53);
+
+}
+
+#descricao{
+    width: 62%;
+    text-align: center;
+}
+
+#textoDescricao{
+    color: #adb8f1;
+}
+
+#textoBemVindo{
+    margin: 25px 0px 25px 0px;
+    color: #db8401;
+    font-weight: bold;
+}
+
+#fotosContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    
+
+}
+
+#fotosContainer div{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+    text-align: center;
+    font-size: 30px;
+    font-style: italic;
+    color: antiquewhite;
+}
+
+#fotosContainer div img{
+    /* border: 3px solid #3498db; */
+    margin: 40px 0;
+    border-radius: 10% 10% 32% 32%;
+}
+
+
+#fotosContainer div img:hover{
+    border: 3px solid #042941;
+    animation: giroDiv 3s linear alternate 0s infinite ;
+   
+}
+
+#cardapio{
+    background-color: #0a75cc;
+}
+#cardapio img{
+    margin: 40px 0px;
+    width: 100%;
+    height: 40vh;
+    filter: brightness(0.8) contrast(2) saturate(1.5);
+  
+    /* background-color: #042941; */
+}
+#cardapio h1{
+    color: #04263c;
+    font-weight: bold;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    box-shadow: 4px 10px 10px 5px;
+}
+
+.tipos h1{
+    color: #04263c;
+    font-weight: bold;
+    font-size: 48px;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0px;
+    box-shadow: 4px 20px 20px 10px;
+}
+
+.listas{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.listas li{
+    margin-top: 25px;
+    animation: aparecerBlocosDeLado linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+
+
+}
+
+.listas strong{
+    color: #042941;
+}
+
+#eventos{
+    background-color: #350a10;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#eventos h1{
+    margin: 30px;
+    font-size: 50px;
+    font-weight: bold;
+    animation: mudarCor alternate 5s linear infinite;
+}
+#evento{
+    display: flex;
+    flex-direction: row;
+    background-color: #220805;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+    width: 80vh;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10vh;
+
+
+}
+#evento div{
+    /* background-color: #ff1900; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#botaoInvisivel{
+    border-radius: 28%;
+    background-image: url(Img/foto-laço.avif);
+    background-position: center;
+    background-size: contain;
+    width: 280px;
+    height: 380px;
+    border-radius: 28%;
+    box-shadow: 4px 10px 10px 5px black;
+}
+
+#botaoInvisivel:hover{
+    transition: 1s;
+    transform: scale(1.05);
+    background-image: url(Img/foto-ganhador-do-evento.png);
+    background-size: cover;
+}
+
+
+#especificacaoEvento{
+    width: 40%;
+    margin-bottom: 10vh;
+}
+
+#especificacaoEvento p{
+    margin-top: 20px;
+    /* background-color: cadetblue; */
+}
+
+#conteiner{
+    display: flex;
+    flex-direction: row;
+}
+
+
+@keyframes giroDiv{
+    0%{
+        border-radius: 10% 10% 32% 32%;
+    }
+    100%{
+        border-radius: 32% 32% 10% 10%;
+
+    }
+}
+
+
+@keyframes aparecerBlocosDeLado{
+    from{
+        opacity: 0;
+        transform: translateX(-230px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+} 
+
+
+
+
+

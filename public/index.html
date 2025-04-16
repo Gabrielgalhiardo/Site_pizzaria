@@ -9,7 +9,10 @@
 <body id="fundo">
     <section id="primeiraParte">
         <article id="inicio">
-            <h1>Bem-vindo</h1>
+            <div class="titulo">
+                <h1>ㅤㅤㅤBem-vindo</h1>
+                <div class="mudarCor"><button onclick="mudarModo()" id="botaoMudar" type="button"><p id="textoBotaoMudar">Ativar modo Claro</p></button></div>
+            </div>
             <form id="loginForm">
                 <div id="email">
                     <label for="inputNome">Email:ㅤ</label>
@@ -21,23 +24,25 @@
                     <button onclick="mostrarSenha()" id="botaoSenha" type="button"><p id="textoBotaoSenha">👁️</p></button>
 
                 </div>
-            
+                <br>
                 <button type="button" id="botaoEnviar" onclick="logarSite()">Entrar</button>
             </form>
-            <button onclick="mudarModo()" id="botaoMudar" type="button"><p id="textoBotaoMudar">Ativar modo noturno</p></button>
         </div>
         <div class="boxLogin">
-            <button type="button" onclick="mudarPagina()" class="botaologin"><p>Fazer cadastro</p></button>
+            <button type="button" onclick="mudarPagina()" class="botaologin"><p>Não tem login? Faça cadastro</p></button>
         </div>
     </article>
     
 
     <article id="cadastrar">
         <form id="formulario">
-            <h1>Cadastro</h1>
+            <div class="titulo">
+                <h1>ㅤㅤㅤCadastro</h1>
+                <div class="mudarCor"><button onclick="mudarModo()" id="botaoMudar" type="button"><p id="textoBotaoMudar">Ativar modo Claro</p></button></div>
+            </div>
             <div class="form-group">
                 <label for="emailCriado">E-mail:</label> 
-                <input type="text" placeholder="Gabriel@gmail.com" id="emailCriado"> 
+                <input type="text" placeholder="Exemplo@gmail.com" id="emailCriado"> 
             </div>
             <div class="form-group">
                 <label for="senhaCriada">Senha:</label>
