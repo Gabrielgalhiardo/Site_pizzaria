@@ -10,7 +10,7 @@ body{
 #inicio{
     background-color: rgba(15, 11, 2, 0.726);
     box-shadow: 13px 10px 10px black;
-    width: 35%;
+    width: max-content;
     height: 20em;
     display: flex;
     flex-direction: column;
@@ -25,16 +25,16 @@ body{
 
 #cadastrar{
     background-color: rgba(15, 11, 2, 0.726);
-    box-shadow: 20px 10px 10px black;
-    width: 35%;
+    box-shadow: 13px 10px 10px black;
+    width: max-content;
     height: 20em;
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
     margin-top: 15%;
     border-radius: 20px;
-    transition: background-color 0.6s, color 0.4s; 
+    transition: background-color 0.6s, color 0.4s;
 }
 h1{
     /* background-color: black; */
@@ -52,24 +52,35 @@ h1{
     cursor: pointer;
 }
 
-#botaoMudar{
+.botaoMudar{
     background-color: transparent;
     border: transparent;
     width: 5em;
     height: 5em;
     font-weight: bold;
     color: white;
+    cursor: pointer;
 }
 
-#botaoMudar:hover{
+.botaoMudar:hover{
     animation: mudarCor alternate 5s linear infinite;
 
 }
 
-.titulo{
+#tituloLogin{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    width: max-content;
+    text-align:center;
+    /* background-color: red; */
+}
+
+#tituloCadastro{
+    display: flex;
+    flex-direction: row;
+    width: max-content;
+    text-align:center;
+    /* background-color: red; */
 }
 
 form{
@@ -103,7 +114,7 @@ form{
 #botaoEnviar, #botaoCadastrar{
     background-color: rgb(235, 140, 15);
     border: transparent;
-    width: 50%;
+    width: max-content;
     padding: 9px;
     margin-top: 10px;
     display: flex;
@@ -119,9 +130,6 @@ form{
     cursor: pointer;
 }
 
-#cadastrar{
-    display: none;
-}
 
 .botaologin{
     font-size: 15px;
@@ -131,6 +139,7 @@ form{
     height: 6vh;
     width: 15vh;
     color: white;
+    text-align: center;
 
 
 }
@@ -140,6 +149,7 @@ form{
     transform: scale(1.15);
     color: rgb(102, 102, 102);
     cursor: pointer;
+    
     
 }
 

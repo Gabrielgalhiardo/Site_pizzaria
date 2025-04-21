@@ -27,8 +27,6 @@ function logarSite(){
     let email = document.getElementById('inputNome').value.trim();
     let senha = document.getElementById('inputSenha').value.trim();
 
-    console.log(email, senha)
-
     if (email === '' || senha === ''){
         alert('Preencha todos os campos!');
         return;
@@ -44,7 +42,7 @@ function logarSite(){
         data.forEach(usuario => {
             if(email === usuario.email & senha === usuario.senha){
                 alert('Pagina aceitou sua solicitação!');
-                window.location.href = `public/pizzariaSite/pizzaria.html`;
+                window.location.href = `pizzariaSite/pizzaria.html`;
                 return;
             }else if(email === usuario.email){
                 alert('Senha errada!');
@@ -60,29 +58,41 @@ var escuro = true;
 function mudarModo(){
     let fundo = document.body;
     let fundinho = document.getElementById(`inicio`);
-    let textoBotao = document.getElementById(`textoBotaoMudar`);
     let botaoLogin = document.querySelectorAll(`.botaologin`);
     let cadastro = document.getElementById(`cadastrar`);
+    let textoBotao = document.querySelectorAll(`.textoBotaoMudar`);
 
-    if(escuro){
-        fundo.style.color = `black`;
-        fundinho.style.backgroundColor = `rgb(165, 165, 165)`;
-        textoBotao.innerText = `Ativar modo Escuro`;
-        textoBotao.style.color = `black`;
-        botaoLogin.forEach(textoColor => {
-            textoColor.style.color = `black`;
+    if (escuro) {
+        fundo.style.color = 'black';
+        fundo.style.backgroundColor = 'white';
+        fundinho.style.backgroundColor = 'rgb(165, 165, 165)';
+        
+        textoBotao.forEach(botao => {
+            botao.innerText = 'Ativar modo Escuro';
+            botao.style.color = 'black';
         });
-        cadastro.style.backgroundColor = `rgb(165, 165, 165)`;
+        
+        botaoLogin.forEach(textoColor => {
+            textoColor.style.color = 'black';
+        });
+        
+        cadastro.style.backgroundColor = 'rgb(165, 165, 165)';
         escuro = false;
-    }else{
-        fundo.style.color = `white`;
-        fundinho.style.backgroundColor = `rgba(15, 11, 2, 0.726)`;
-        textoBotao.innerText = `Ativar modo Claro`; 
-        textoBotao.style.color = `White`;
-        botaoLogin.forEach(textoColor => {
-            textoColor.style.color = `White`;
+    } else {
+        fundo.style.color = 'white';
+        fundo.style.backgroundColor = 'rgb(20, 20, 20)'; 
+        fundinho.style.backgroundColor = 'rgba(15, 11, 2, 0.726)';
+        
+        textoBotao.forEach(botao => {
+            botao.innerText = 'Ativar modo Claro';
+            botao.style.color = 'White';
         });
-        cadastro.style.backgroundColor = `rgba(15, 11, 2, 0.726)`;
+        
+        botaoLogin.forEach(textoColor => {
+            textoColor.style.color = 'White';
+        });
+        
+        cadastro.style.backgroundColor = 'rgba(15, 11, 2, 0.726)';
         escuro = true;
     }
 }
