@@ -7,6 +7,10 @@
     /* background-color: black; */
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 header{
     height: 100vh;
     width: 100%;
@@ -41,6 +45,7 @@ li{
 a{
     text-decoration: none;
     font-weight: bold;
+
 }
 
 a:hover{
@@ -116,7 +121,7 @@ a:hover{
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    
+    width: 100vw;
 
 }
 
@@ -193,11 +198,12 @@ a:hover{
 }
 
 #eventos{
-    background-color: #350a10;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 70vh;
+    background-color: #350a10;
 }
 
 #eventos h1{
@@ -206,22 +212,19 @@ a:hover{
     font-weight: bold;
     animation: mudarCor alternate 5s linear infinite;
 }
-#evento{
+.evento{
     display: flex;
     flex-direction: row;
-    background-color: #220805;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-    width: 80vh;
-    align-items: center;
+    width: 45%;
+    margin-left: 2%;
+    height: max-content;
     justify-content: center;
-    margin-left: 10vh;
-
-
+    align-items: center;
+    background-color: #220805;
+    
 }
-#evento div{
-    /* background-color: #ff1900; */
+
+.evento div{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -247,6 +250,24 @@ a:hover{
     background-size: cover;
 }
 
+.botaoInvisivel{
+    border-radius: 28%;
+    background-image: url(Img/foto-laço.avif);
+    background-position: center;
+    background-size: contain;
+    width: 280px;
+    height: 380px;
+    border-radius: 28%;
+    box-shadow: 4px 10px 10px 5px black;
+}
+
+.botaoInvisivel:hover{
+    transition: 1s;
+    transform: scale(1.05);
+    background-image: url(Img/ganhador2.jpg);
+    background-size: cover;
+}
+
 
 #especificacaoEvento{
     width: 40%;
@@ -263,6 +284,16 @@ a:hover{
     flex-direction: row;
 }
 
+footer{
+    background-color: rgb(0, 0, 0);
+}
+
+#conteinerFooter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: red; */
+}
 
 @keyframes giroDiv{
     0%{
@@ -286,6 +317,33 @@ a:hover{
     }
 } 
 
+
+@keyframes mudarCor{
+    0%{
+        color: white;
+    }
+    15%{
+        color: red;
+    }
+    30%{
+        color: blue;
+    }
+    45%{
+        color: purple;
+    }
+    60%{
+        color: yellow;
+    }
+    75%{
+        color: green;
+    }
+    90%{
+        color: orange;
+    }
+    100%{
+        color: pink;
+    }
+}
 
 
 
